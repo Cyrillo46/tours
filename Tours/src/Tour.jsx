@@ -1,3 +1,7 @@
 export const Tour = () => {
-  return <div>Tour</div>;
+  return (
+    <section>
+      <h2>Our Tours</h2>
+    </section>
+  );
 };
