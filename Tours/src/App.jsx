@@ -31,6 +31,15 @@ function App() {
     return <Loading />;
   }
 
+  if (tours.length === 0) {
+    return (
+      <main>
+        <h2>No Tours Remaining</h2>
+        <button onClick={fetchTours}>Refresh Tours</button>
+      </main>
+    );
+  }
+
   return <Tours tours={tours} removeTour={removeTour} />;
 }
 
