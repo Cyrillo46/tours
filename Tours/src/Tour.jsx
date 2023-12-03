@@ -1,7 +1,12 @@
-export const Tour = () => {
+export const Tour = ({ id, price, info, image, name }) => {
   return (
     <section>
-      <h2>Our Tours</h2>
+      <div>
+        <h3>{name}</h3>
+        <img src={image} alt={name} />
+        <span>${price}</span>
+        <p>{info}</p>
+      </div>
     </section>
   );
 };
