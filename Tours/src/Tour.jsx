@@ -1,4 +1,4 @@
-export const Tour = ({ id, price, info, image, name }) => {
+export const Tour = ({ id, price, info, image, name, removeTour }) => {
   return (
     <section>
       <div>
@@ -6,6 +6,7 @@ export const Tour = ({ id, price, info, image, name }) => {
         <img src={image} alt={name} />
         <span>${price}</span>
         <p>{info}</p>
+        <button onClick={() => removeTour(id)}>Not Interested</button>
       </div>
     </section>
   );

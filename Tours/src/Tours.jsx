@@ -1,6 +1,6 @@
 import { Tour } from "./Tour";
 
-export const Tours = ({ tours }) => {
+export const Tours = ({ tours, removeTour }) => {
   return (
     <section>
       <div>
@@ -8,7 +8,7 @@ export const Tours = ({ tours }) => {
       </div>
       <div>
         {tours.map((tour) => (
-          <Tour key={tour.id} {...tour} />
+          <Tour key={tour.id} {...tour} removeTour={removeTour} />
         ))}
       </div>
     </section>
