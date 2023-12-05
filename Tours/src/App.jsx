@@ -14,7 +14,6 @@ function App() {
   };
 
   const fetchTours = async () => {
-    // will use later
     setLoading(true);
     try {
       const response = await fetch(url);
