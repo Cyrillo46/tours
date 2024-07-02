@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Tours from "./Tours";
 
-const url = "https://course-api.com/react-tours-project";
+const url = "https://www.course-api.com/react-tours-project";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +25,7 @@ function App() {
       console.log(error);
     }
   };
+
   useEffect(() => {
     fetchTours();
   }, []);
@@ -35,6 +36,7 @@ function App() {
       </main>
     );
   }
+
   if (tours.length === 0) {
     return (
       <main>
@@ -47,6 +49,7 @@ function App() {
       </main>
     );
   }
+
   return (
     <main>
       <Tours tours={tours} removeTour={removeTour} />
